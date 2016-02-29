@@ -17,6 +17,8 @@
       <property name="suffix" value=".jsp" />
    </bean>
    
+   <mvc:resources mapping="/resources/**" location="/resources/" /> 
+   
    <!-- JSON Support 
     <bean name="viewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
     <bean name="jsonTemplate" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"/>
