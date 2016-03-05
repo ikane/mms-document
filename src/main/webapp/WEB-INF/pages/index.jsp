@@ -2,7 +2,14 @@
 
 <html data-ng-app="mmsDocument">
 	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 		<title>MMS Document Application</title>
+		<meta name="description" content="MMS Document Application">
+    	<meta name="author" content="MMS VERIFONE">
+    	<link rel="shortcut icon" href="resources/favicon.ico">
 		
 		<!-- Vendor style -->
 		<link href="resources/css/bootstrap.min.css" rel="stylesheet">
