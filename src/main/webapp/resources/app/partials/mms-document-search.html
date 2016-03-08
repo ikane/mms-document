@@ -1,3 +1,5 @@
+<a href="/#/mms-document-detail" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add document</a> <br/><br/>
+
 <form class="form-horizontal well">
     <div class="form-group">
         <div ng-hide="isAvailableResults()">
@@ -9,7 +11,7 @@
                 <br/>
             </div>
         </div>
-        <label id="search-input-label" class="col-sm-3 control-label">Searching documents</label>
+        <label id="search-input-label" class="col-sm-3 control-label">Keywords</label>
         <div class="col-sm-6">
             <input type="text" class="form-control"  placeholder="enter tags search" ng-model="searchText"
                    typeahead="album for album in autocomplete($viewValue) | filter:$viewValue" />
