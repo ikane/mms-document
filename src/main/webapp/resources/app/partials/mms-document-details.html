@@ -1,1 +1,21 @@
-details...
+<form name="mmsDocumentForm" class="form well">
+
+	<div class="form-group">
+		<label class="form-label">Title</label>
+		<input type="text" class="form-control" data-ng-model="mmsDocument.title" required>
+	</div>
+	<div class="form-group">
+		<label class="form-label">Description</label>
+		<textarea rows="5" cols="10" class="form-control" data-ng-model="mmsDocument.description"></textarea>
+	</div>
+	
+	<div class="form-group">
+		<!--
+		<label for="mmsDocumentFile">Document</label>
+		 
+		<input data-ngf-select="" data-ng-model="mmsDocumentFile" name="mmsDocumentFile" type="file" data-ngf-max-size="2MB" required class="btn btn-default">
+		 -->
+		 <div class="btn btn-default" ngf-select ng-model="mmsDocumentFile" name="mmsDocumentFile" ngf-max-size="20MB" required>Select Document</div> &nbsp; {{mmsDocumentFile.name}}
+	</div>
+	<input type="button" class="btn btn-primary" ng-disabled="!mmsDocumentForm.$valid" ng-click="saveDocument()" value="Save">
+</form>
