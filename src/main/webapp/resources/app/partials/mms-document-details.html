@@ -1,21 +1,32 @@
 <form name="mmsDocumentForm" class="form well">
 
 	<div class="form-group">
-		<label class="form-label">Title</label>
+		<label class="control-label">Title</label>
 		<input type="text" class="form-control" data-ng-model="mmsDocument.title" required>
 	</div>
+	 
 	<div class="form-group">
-		<label class="form-label">Description</label>
+		<label class="control-label">Description</label>
 		<textarea rows="5" cols="10" class="form-control" data-ng-model="mmsDocument.description"></textarea>
 	</div>
 	
 	<div class="form-group">
-		<!--
-		<label for="mmsDocumentFile">Document</label>
-		 
-		<input data-ngf-select="" data-ng-model="mmsDocumentFile" name="mmsDocumentFile" type="file" data-ngf-max-size="2MB" required class="btn btn-default">
-		 -->
-		 <div class="btn btn-default" ngf-select ng-model="mmsDocumentFile" name="mmsDocumentFile" ngf-max-size="20MB" required>Select Document</div> &nbsp; {{mmsDocumentFile.name}}
+		<label class="control-label">Keywords</label>
+		<tags-input ng-model="mmsDocument.tags" replace-spaces-with-dashes="false" min-tags="1"></tags-input>
 	</div>
-	<input type="button" class="btn btn-primary" ng-disabled="!mmsDocumentForm.$valid" ng-click="saveDocument()" value="Save">
+	
+	<div class="form-group">
+		 <div class="btn btn-warning" ngf-select ng-model="mmsDocumentFile" name="mmsDocumentFile" ngf-max-size="20MB" required>Select Document</div> &nbsp; {{mmsDocumentFile.name}}
+	</div>
+	 
+	 <hr>
+	
+	<div class="text-right">
+<!--          <div class="col-sm-offset-11 col-sm-1"> </div> -->
+             <!-- <button type="submit" class="btn-u btn-u-green">Sign in</button> -->
+             <input type="button" class="btn btn-success" ng-disabled="!mmsDocumentForm.$valid" ng-click="saveDocument()" value="Save">
+         
+     </div>
+                            
+	
 </form>
