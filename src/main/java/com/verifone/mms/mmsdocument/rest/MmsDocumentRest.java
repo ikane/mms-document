@@ -4,11 +4,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.multipart.MultipartFile;
+
+
 
 import com.verifone.mms.mmsdocument.entities.MmsDocument;
 
@@ -34,6 +40,18 @@ public class MmsDocumentRest {
 		model.addAttribute("message", "Hello Spring MVC Framework!");
 
 		return list;
+	}
+	
+	@ResponseStatus(value=HttpStatus.OK)
+    @RequestMapping(value = "/uploadMmsDocument", method = RequestMethod.POST)
+    public void uploadMmsDocument(@RequestParam("file") MultipartFile file, @RequestParam("documentTitle") String documentTitle, @RequestParam("documentDescription") String documentDescription) {
+		
+		if (!file.isEmpty()) {
+			
+			 String mimeType = file.getContentType();
+             String filename = file.getOriginalFilename();
+			
+		}
 	}
 
 }
