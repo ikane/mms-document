@@ -1,7 +1,6 @@
 'use strict';
 
-
-var mmsDocument = angular.module("mmsDocument", ["ngAnimate", "ngTouch", "ui.bootstrap", "ngRoute", "ngFileUpload"]);
+var mmsDocument = angular.module("mmsDocument", ["ngAnimate", "ngTouch", "ui.bootstrap", "ngRoute", "ngFileUpload", "ngTagsInput"]);
 
 
 mmsDocument.config(function($routeProvider) {
@@ -48,9 +47,17 @@ function MmsDocumentDetailsController($scope, $http, Upload) {
 	
 	// upload on file select or drop 
     $scope.upload = function (file) {
+    	
+    	var tags = [];
+    	for (var i = 0; i < $scope.mmsDocument.tags.length; i++) {
+    		var tag = $scope.mmsDocument.tags[i];
+    		console.log(tag.text);
+    		tags.push(tag.text);
+    	}
+    	
         Upload.upload({
             url: 'uploadMmsDocument',
-            data: {file: file, 'documentTitle': $scope.mmsDocument.title, 'documentDescription': $scope.mmsDocument.description}
+            data: {file: file, 'documentTitle': $scope.mmsDocument.title, 'documentDescription': $scope.mmsDocument.description, 'documentTags': tags.join()}
         }).then(function (resp) {
             console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
         }, function (resp) {
