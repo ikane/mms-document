@@ -44,7 +44,11 @@ public class MmsDocumentRest {
 	
 	@ResponseStatus(value=HttpStatus.OK)
     @RequestMapping(value = "/uploadMmsDocument", method = RequestMethod.POST)
-    public void uploadMmsDocument(@RequestParam("file") MultipartFile file, @RequestParam("documentTitle") String documentTitle, @RequestParam("documentDescription") String documentDescription) {
+    public void uploadMmsDocument(@RequestParam("file") MultipartFile file, 
+    								@RequestParam("documentTitle") String documentTitle, 
+    								@RequestParam("documentDescription") String documentDescription,
+    								@RequestParam("documentTags") List<String> tags
+    								) {
 		
 		if (!file.isEmpty()) {
 			
