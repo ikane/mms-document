@@ -51,6 +51,8 @@ public class MmsDocumentRest {
 			 String mimeType = file.getContentType();
              String filename = file.getOriginalFilename();
 			
+             System.out.println("Mime TYPE: " + mimeType);
+             System.out.println("Filename: " + filename);
 		}
 	}
 
