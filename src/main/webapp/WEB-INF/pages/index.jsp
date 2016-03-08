@@ -12,7 +12,9 @@
     	<link rel="shortcut icon" href="resources/favicon.ico">
 		
 		<!-- Vendor style -->
-		<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+		<link rel="stylesheet" href="resources/css/ng-tags-input.min.css">
+		<link rel="stylesheet" href="resources/css/ng-tags-input.bootstrap.min.css">   
 		
 		<!-- Custom style -->
 	</head>
@@ -30,7 +32,7 @@
 		                  <span class="icon-bar"></span>
 		                  <span class="icon-bar"></span>
 		              </button>
-		              <a class="navbar-brand" href="#" style="color: #00aeef;font-weight: 600;">MMS-DOCUMENT</a>
+		              <a class="navbar-brand" href="/#/" style="color: #00aeef;font-weight: 600;">MMS-DOCUMENT</a>
 		          </div>
 		          <div class="navbar-collapse collapse">
 		              <ul class="nav navbar-nav">
@@ -101,10 +103,12 @@
 		<script type="text/javascript" src="resources/js/angular-animate.min.js"></script>
 		<script type="text/javascript" src="resources/js/angular-touch.min.js"></script>
 		<script type="text/javascript" src="resources/js/angular-route.min.js"></script>
+		<script type="text/javascript" src="resources/js/jquery-1.12.1.min.js"></script>
 		<script type="text/javascript" src="resources/js/ui-bootstrap-tpls-1.2.1.min.js"></script>
 		<!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
 		<script src="resources/js/ng-file-upload-shim.min.js"></script>
 		<script src="resources/js/ng-file-upload-all.min.js"></script>
+		<script type="text/javascript" src="resources/js/ng-tags-input.min.js"></script>
 		
 		<!-- Custom scripts -->
 		<script type="text/javascript" src="resources/app/app.js"></script>
