@@ -17,6 +17,8 @@
       <property name="suffix" value=".jsp" />
    </bean>
    
+   <mvc:resources mapping="/resources/fonts/**" location="/resources/fonts" /> 
+   <mvc:resources mapping="/fonts/**" location="/fonts" /> 
    <mvc:resources mapping="/resources/**" location="/resources/" /> 
    
    <!-- JSON Support 

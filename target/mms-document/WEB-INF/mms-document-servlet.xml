@@ -17,12 +17,18 @@
       <property name="suffix" value=".jsp" />
    </bean>
    
+   <mvc:resources mapping="/resources/fonts/**" location="/resources/fonts" /> 
+   <mvc:resources mapping="/fonts/**" location="/fonts" /> 
    <mvc:resources mapping="/resources/**" location="/resources/" /> 
    
    <!-- JSON Support 
     <bean name="viewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
     <bean name="jsonTemplate" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"/>
     -->
+    
+   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	    <property name="maxUploadSize" value="5000000"/>
+   </bean>
    
    <mvc:annotation-driven/>
 

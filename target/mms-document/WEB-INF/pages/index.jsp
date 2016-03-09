@@ -12,9 +12,13 @@
     	<link rel="shortcut icon" href="resources/favicon.ico">
 		
 		<!-- Vendor style -->
-		<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+		<link rel="stylesheet" href="resources/css/ng-tags-input.min.css">
+		<link rel="stylesheet" href="resources/css/ng-tags-input.bootstrap.min.css">
+		<link rel="styleSheet" href="resources/angular-ui-grid/ui-grid.min.css"/>   
 		
 		<!-- Custom style -->
+		<link rel="stylesheet" href="resources/css/mms-document.css">
 	</head>
 	
 	<body data-ng-controller="MainController">
@@ -30,11 +34,11 @@
 		                  <span class="icon-bar"></span>
 		                  <span class="icon-bar"></span>
 		              </button>
-		              <a class="navbar-brand" href="#">MMS-DOCUMENT</a>
+		              <a class="navbar-brand" href="/#/" style="color: #00aeef;font-weight: 600;">MMS-DOCUMENT</a>
 		          </div>
 		          <div class="navbar-collapse collapse">
 		              <ul class="nav navbar-nav">
-		                  <li class="active"><a href="#search">Search</a></li>
+		                  <li class="active"><a href="#search">Home</a></li>
 		                  <li><a href="#info">Information</a></li>
 		              </ul>
 		          </div><!--/.nav-collapse -->
@@ -91,7 +95,7 @@
 		<hr>
 		 
 		<footer>
-			<p>© MMS Verifone 2016</p>
+			<p>Â© MMS Verifone 2016</p>
 		</footer>
 		-->
 		
@@ -101,11 +105,16 @@
 		<script type="text/javascript" src="resources/js/angular-animate.min.js"></script>
 		<script type="text/javascript" src="resources/js/angular-touch.min.js"></script>
 		<script type="text/javascript" src="resources/js/angular-route.min.js"></script>
+		<script type="text/javascript" src="resources/js/jquery-1.12.1.min.js"></script>
 		<script type="text/javascript" src="resources/js/ui-bootstrap-tpls-1.2.1.min.js"></script>
+		<script src="resources/js/angular-ui-grid/ui-grid.min.js"></script>
+		<!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
+		<script src="resources/js/ng-file-upload-shim.min.js"></script>
+		<script src="resources/js/ng-file-upload-all.min.js"></script>
+		<script type="text/javascript" src="resources/js/ng-tags-input.min.js"></script>
 		
 		<!-- Custom scripts -->
 		<script type="text/javascript" src="resources/app/app.js"></script>
-		
 		
 	</body>
 </html>

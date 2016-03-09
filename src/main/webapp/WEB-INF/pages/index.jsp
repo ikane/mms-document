@@ -14,9 +14,13 @@
 		<!-- Vendor style -->
 		<link rel="stylesheet" href="resources/css/bootstrap.min.css">
 		<link rel="stylesheet" href="resources/css/ng-tags-input.min.css">
-		<link rel="stylesheet" href="resources/css/ng-tags-input.bootstrap.min.css">   
+		<link rel="stylesheet" href="resources/css/ng-tags-input.bootstrap.min.css">
+		
+<!-- 		<link rel="styleSheet" href="resources/angular-ui-grid/ui-grid.min.css"/>    -->
+		<link rel="styleSheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"/>   
 		
 		<!-- Custom style -->
+		<link rel="stylesheet" href="resources/css/mms-document.css">
 	</head>
 	
 	<body data-ng-controller="MainController">
@@ -105,6 +109,10 @@
 		<script type="text/javascript" src="resources/js/angular-route.min.js"></script>
 		<script type="text/javascript" src="resources/js/jquery-1.12.1.min.js"></script>
 		<script type="text/javascript" src="resources/js/ui-bootstrap-tpls-1.2.1.min.js"></script>
+		
+<!-- 		<script src="resources/js/angular-ui-grid/ui-grid.min.js"></script> -->
+		<script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+		
 		<!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
 		<script src="resources/js/ng-file-upload-shim.min.js"></script>
 		<script src="resources/js/ng-file-upload-all.min.js"></script>

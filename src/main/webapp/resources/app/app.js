@@ -1,6 +1,6 @@
 'use strict';
 
-var mmsDocument = angular.module("mmsDocument", ["ngAnimate", "ngTouch", "ui.bootstrap", "ngRoute", "ngFileUpload", "ngTagsInput"]);
+var mmsDocument = angular.module("mmsDocument", ["ngAnimate", "ngTouch", "ui.bootstrap", "ngRoute", "ui.grid", "ngFileUpload", "ngTagsInput"]);
 
 
 mmsDocument.config(function($routeProvider) {
@@ -17,16 +17,34 @@ mmsDocument.controller('MmsDocumentDetailsController', MmsDocumentDetailsControl
 
 function MainController($scope, $http) {
 	
+	function init() {
+		
+		$scope.mmsDocumentData = [];
+		
+		$scope.gridOptions = {};
+		$scope.gridOptions.data = 'mmsDocumentData';
+		
+		$scope.gridOptions.columnDefs = [
+		                                 { name:'idDocument', enableCellEdit: false },
+		                                 { name:'title'},
+		                                 { name:'description', enableCellEdit: true},
+		                                 { name:'creationDate', cellFilter:'date', type:'date', enableFiltering:false },
+		                               ];
+	}
+	
 	$http.get('mmsdocuments')
 		.success(function(data) {
 			console.log(data);
-			$scope.mmsdocuments = data;
+			$scope.mmsDocumentData = data;
 		})
 		.error(function(data) {
 			alert('An error occured, check logs');
 			console.log(data);
 		})
 		;
+	
+	//Initialization
+	init();
 }
 
 
