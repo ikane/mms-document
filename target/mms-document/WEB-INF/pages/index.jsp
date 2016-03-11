@@ -15,7 +15,9 @@
 		<link rel="stylesheet" href="resources/css/bootstrap.min.css">
 		<link rel="stylesheet" href="resources/css/ng-tags-input.min.css">
 		<link rel="stylesheet" href="resources/css/ng-tags-input.bootstrap.min.css">
-		<link rel="styleSheet" href="resources/angular-ui-grid/ui-grid.min.css"/>   
+		
+<!-- 		<link rel="styleSheet" href="resources/angular-ui-grid/ui-grid.min.css"/>    -->
+		<link rel="styleSheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"/>   
 		
 		<!-- Custom style -->
 		<link rel="stylesheet" href="resources/css/mms-document.css">
@@ -38,8 +40,8 @@
 		          </div>
 		          <div class="navbar-collapse collapse">
 		              <ul class="nav navbar-nav">
-		                  <li class="active"><a href="#search">Home</a></li>
-		                  <li><a href="#info">Information</a></li>
+		                  <li class="active"><a href="#search"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+		                  <li><a href="#/info"><span class="glyphicon glyphicon-info-sign"></span>Information</a></li>
 		              </ul>
 		          </div><!--/.nav-collapse -->
 		      </nav>
@@ -48,56 +50,7 @@
 		
 		</div> <!-- /container main-->
 		
-		<!-- 
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-		  <div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">MMS DOCUMENT</a>
-			</div>
-		  </div>
-		</nav>
 		
-		<div class="jumbotron">
-		  <div class="container">
-			<h1>Title</h1>
-			<p>				
-				Welcome Welcome!
-		    </p>
-		    <p>
-				<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-		    </p>
-		  </div>
-		</div>
- 
-		
-		<div class="container">
- 
-  			<div class="row">
-  
-				<table class="table">
-					<tr>
-						<td>Title</td>
-						<td>Description</td>
-						<td>Creation Date</td>
-					</tr>
-					
-					<tr data-ng-repeat="doc in mmsdocuments">
-						<td>{{doc.title}}</td>
-						<td>{{doc.description}}</td>
-						<td>{{doc.creationDate | date:'dd/MM/yyyy'}}</td>
-					</tr>
-				</table>
-				
-			</div>
-		</div>
-		 
-		
-		<hr>
-		 
-		<footer>
-			<p>© MMS Verifone 2016</p>
-		</footer>
-		-->
 		
 		
 		<!-- Vendor scripts -->
@@ -107,7 +60,10 @@
 		<script type="text/javascript" src="resources/js/angular-route.min.js"></script>
 		<script type="text/javascript" src="resources/js/jquery-1.12.1.min.js"></script>
 		<script type="text/javascript" src="resources/js/ui-bootstrap-tpls-1.2.1.min.js"></script>
-		<script src="resources/js/angular-ui-grid/ui-grid.min.js"></script>
+		
+<!-- 		<script src="resources/js/angular-ui-grid/ui-grid.min.js"></script> -->
+		<script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+		
 		<!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
 		<script src="resources/js/ng-file-upload-shim.min.js"></script>
 		<script src="resources/js/ng-file-upload-all.min.js"></script>
