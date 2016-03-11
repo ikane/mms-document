@@ -1,9 +1,14 @@
 package com.verifone.mms.mmsdocument.rest;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.io.IOUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -13,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
-
 
 
 import com.verifone.mms.mmsdocument.entities.MmsDocument;
@@ -57,7 +61,30 @@ public class MmsDocumentRest {
 			
              System.out.println("Mime TYPE: " + mimeType);
              System.out.println("Filename: " + filename);
+             
+             //TODO: save doc somewhere...
 		}
 	}
+	
+	// Download a file
+    @RequestMapping(value = "/download", method = RequestMethod.GET)
+    public void downloadFile(@RequestParam("filename") String filename, HttpServletResponse response)  throws Exception {
+
+        //File file = fileUpload.getFile();
+        File downloadFile = new File("D:\\Profiles\\T_IbrahimaK1\\Downloads\\9781441983022-c1.pdf");
+        
+        //TODO get document somewhere...
+        
+        FileInputStream inputStream = new FileInputStream(downloadFile);
+        
+        response.setContentType("application/pdf");
+        response.setHeader("content-disposition", "inline; filename=exemple.pdf");
+        
+        IOUtils.copy(inputStream, response.getOutputStream());
+        response.flushBuffer();
+        
+        inputStream.close();
+        response.getOutputStream().close();
+    }
 
 }

@@ -40,8 +40,8 @@
 		          </div>
 		          <div class="navbar-collapse collapse">
 		              <ul class="nav navbar-nav">
-		                  <li class="active"><a href="#search">Home</a></li>
-		                  <li><a href="#info">Information</a></li>
+		                  <li class="active"><a href="#search"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+		                  <li><a href="#/info"><span class="glyphicon glyphicon-info-sign"></span>Information</a></li>
 		              </ul>
 		          </div><!--/.nav-collapse -->
 		      </nav>
@@ -50,56 +50,7 @@
 		
 		</div> <!-- /container main-->
 		
-		<!-- 
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-		  <div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">MMS DOCUMENT</a>
-			</div>
-		  </div>
-		</nav>
 		
-		<div class="jumbotron">
-		  <div class="container">
-			<h1>Title</h1>
-			<p>				
-				Welcome Welcome!
-		    </p>
-		    <p>
-				<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-		    </p>
-		  </div>
-		</div>
- 
-		
-		<div class="container">
- 
-  			<div class="row">
-  
-				<table class="table">
-					<tr>
-						<td>Title</td>
-						<td>Description</td>
-						<td>Creation Date</td>
-					</tr>
-					
-					<tr data-ng-repeat="doc in mmsdocuments">
-						<td>{{doc.title}}</td>
-						<td>{{doc.description}}</td>
-						<td>{{doc.creationDate | date:'dd/MM/yyyy'}}</td>
-					</tr>
-				</table>
-				
-			</div>
-		</div>
-		 
-		
-		<hr>
-		 
-		<footer>
-			<p>© MMS Verifone 2016</p>
-		</footer>
-		-->
 		
 		
 		<!-- Vendor scripts -->
