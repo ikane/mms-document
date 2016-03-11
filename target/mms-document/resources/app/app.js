@@ -24,17 +24,19 @@ function MainController($scope, $http) {
 		$scope.gridOptions = {};
 		$scope.gridOptions.data = 'mmsDocumentData';
 		
+		/*  class="glyphicon glyphicon-eye-open green" */
 		$scope.gridOptions.columnDefs = [
-		                                 { name:'idDocument', width:50, enableCellEdit: false },
-		                                 { name:'title', width:100 },
-		                                 { name:'description', width:100, enableCellEdit: true},
-		                                 { name:'creationDate', field:'Creation Date', cellFilter:'date', width:150, type:'date', enableFiltering:false },
+		                                 {name:'idDocument', enableCellEdit: false},
+		                                 {name:'title'},
+		                                 {name:'description', enableCellEdit: false},
+		                                 {name:'creationDate', cellFilter:'date', type:'date', enableFiltering:false},
+		                                 {name:'Hyperlink', cellTemplate:'<div>' + '<a href="download?filename={{row.entity.title}}" target="_blank">{{row.entity.title}}</a>' + '</div>' }
 		                               ];
 	}
 	
 	$http.get('mmsdocuments')
 		.success(function(data) {
-			console.log(data);
+			//console.log(data);
 			$scope.mmsDocumentData = data;
 		})
 		.error(function(data) {
