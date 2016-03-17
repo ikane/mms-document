@@ -16,6 +16,8 @@
 		<link rel="stylesheet" href="resources/css/ng-tags-input.min.css">
 		<link rel="stylesheet" href="resources/css/ng-tags-input.bootstrap.min.css">
 		
+		<link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
+		
 <!-- 		<link rel="styleSheet" href="resources/angular-ui-grid/ui-grid.min.css"/>    -->
 		<link rel="styleSheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"/>   
 		
@@ -40,8 +42,10 @@
 		          </div>
 		          <div class="navbar-collapse collapse">
 		              <ul class="nav navbar-nav">
-		                  <li class="active"><a href="#search"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-		                  <li><a href="#/info"><span class="glyphicon glyphicon-info-sign"></span>Information</a></li>
+<!-- 		                  <li class="active"><a href="#search"><span class="glyphicon glyphicon-home"></span>Home</a></li> -->
+<!-- 		                  <li><a href="#/info"><span class="glyphicon glyphicon-info-sign"></span>Information</a></li> -->
+		                  <li class="active"><a href="#search"><i class="fa fa-home fa-fw"></i>&nbsp;Home</a></li>
+		                  <li><a href="#/info"><i class="fa fa-info fa-fw"></i>&nbsp;Information</a></li>
 		              </ul>
 		          </div><!--/.nav-collapse -->
 		      </nav>

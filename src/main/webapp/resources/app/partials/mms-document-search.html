@@ -1,4 +1,5 @@
-<a href="#/mms-document-detail" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add document</a> <br/><br/>
+<!-- <a href="#/mms-document-detail" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add document</a> <br/><br/> -->
+<a href="#/mms-document-detail" class="btn btn-success pull-right"><i class="fa fa-plus-circle fa-fw"></i>&nbsp;Add document</a> <br/><br/>
 
 <form class="form-horizontal well">
     <div class="form-group">
@@ -17,7 +18,8 @@
                    typeahead="album for album in autocomplete($viewValue) | filter:$viewValue" />
         </div>
         <div class="col-sm-1">
-            <button type="submit" class="btn btn-primary" ng-click="fullTextSearch(searchText, 1)"><span class="glyphicon glyphicon-search"></span>Search</button>
+<!--             <button type="submit" class="btn btn-primary" ng-click="fullTextSearch(searchText, 1)"><span class="glyphicon glyphicon-search"></span>Search</button> -->
+            <button type="submit" class="btn btn-primary" ng-click="fullTextSearch(searchText, 1)"><i class="fa fa-search fa-fw"></i>&nbsp;Search</button>
         </div>
     </div>
 </form>
